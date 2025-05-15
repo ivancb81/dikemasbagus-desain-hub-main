@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 240 5.9% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 142.1 70.6% 45.3%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142.1 76.2% 36.3%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-12 xl:px-16;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-green text-white hover:bg-brand-darkGreen transition-colors px-6 py-3 rounded-lg font-medium;
+  }
+  .btn-secondary {
+    @apply bg-white text-brand-black border border-brand-green hover:bg-brand-lightGray transition-colors px-6 py-3 rounded-lg font-medium;
+  }
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  .card-shadow {
+    @apply shadow-lg hover:shadow-xl transition-shadow;
+  }
+}
